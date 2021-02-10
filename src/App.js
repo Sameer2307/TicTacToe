@@ -87,6 +87,17 @@ const App=()=> {
          {
           setWinMessage(`${itemArray[2]} wins`)
          }
+    else {
+        let count =0;
+        for(let i in itemArray){
+          if(itemArray[i]!=="empty"){
+            count = count+1
+          }
+        }
+        if(count ===itemArray.length){
+          setWinMessage("Game is Drawn")
+        }
+      }
   };
 
   const changeItems = itemNumber => {
